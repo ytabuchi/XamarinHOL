@@ -974,32 +974,32 @@ namespace Phoneword.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f080047
-			public const int abc_background_cache_hint_selector_material_dark = 2131230791;
+			// aapt resource value: 0x7f08004a
+			public const int abc_background_cache_hint_selector_material_dark = 2131230794;
 			
-			// aapt resource value: 0x7f080048
-			public const int abc_background_cache_hint_selector_material_light = 2131230792;
+			// aapt resource value: 0x7f08004b
+			public const int abc_background_cache_hint_selector_material_light = 2131230795;
 			
-			// aapt resource value: 0x7f080049
-			public const int abc_color_highlight_material = 2131230793;
+			// aapt resource value: 0x7f08004c
+			public const int abc_color_highlight_material = 2131230796;
 			
 			// aapt resource value: 0x7f080004
 			public const int abc_input_method_navigation_guard = 2131230724;
 			
-			// aapt resource value: 0x7f08004a
-			public const int abc_primary_text_disable_only_material_dark = 2131230794;
-			
-			// aapt resource value: 0x7f08004b
-			public const int abc_primary_text_disable_only_material_light = 2131230795;
-			
-			// aapt resource value: 0x7f08004c
-			public const int abc_primary_text_material_dark = 2131230796;
-			
 			// aapt resource value: 0x7f08004d
-			public const int abc_primary_text_material_light = 2131230797;
+			public const int abc_primary_text_disable_only_material_dark = 2131230797;
 			
 			// aapt resource value: 0x7f08004e
-			public const int abc_search_url_text = 2131230798;
+			public const int abc_primary_text_disable_only_material_light = 2131230798;
+			
+			// aapt resource value: 0x7f08004f
+			public const int abc_primary_text_material_dark = 2131230799;
+			
+			// aapt resource value: 0x7f080050
+			public const int abc_primary_text_material_light = 2131230800;
+			
+			// aapt resource value: 0x7f080051
+			public const int abc_search_url_text = 2131230801;
 			
 			// aapt resource value: 0x7f080005
 			public const int abc_search_url_text_normal = 2131230725;
@@ -1010,11 +1010,11 @@ namespace Phoneword.Droid
 			// aapt resource value: 0x7f080007
 			public const int abc_search_url_text_selected = 2131230727;
 			
-			// aapt resource value: 0x7f08004f
-			public const int abc_secondary_text_material_dark = 2131230799;
+			// aapt resource value: 0x7f080052
+			public const int abc_secondary_text_material_dark = 2131230802;
 			
-			// aapt resource value: 0x7f080050
-			public const int abc_secondary_text_material_light = 2131230800;
+			// aapt resource value: 0x7f080053
+			public const int abc_secondary_text_material_light = 2131230803;
 			
 			// aapt resource value: 0x7f080008
 			public const int accent_material_dark = 2131230728;
@@ -1069,6 +1069,15 @@ namespace Phoneword.Droid
 			
 			// aapt resource value: 0x7f080003
 			public const int cardview_shadow_start_color = 2131230723;
+			
+			// aapt resource value: 0x7f080049
+			public const int colorAccent = 2131230793;
+			
+			// aapt resource value: 0x7f080047
+			public const int colorPrimary = 2131230791;
+			
+			// aapt resource value: 0x7f080048
+			public const int colorPrimaryDark = 2131230792;
 			
 			// aapt resource value: 0x7f08003e
 			public const int design_fab_shadow_end_color = 2131230782;
@@ -1211,11 +1220,11 @@ namespace Phoneword.Droid
 			// aapt resource value: 0x7f08003b
 			public const int switch_thumb_disabled_material_light = 2131230779;
 			
-			// aapt resource value: 0x7f080051
-			public const int switch_thumb_material_dark = 2131230801;
+			// aapt resource value: 0x7f080054
+			public const int switch_thumb_material_dark = 2131230804;
 			
-			// aapt resource value: 0x7f080052
-			public const int switch_thumb_material_light = 2131230802;
+			// aapt resource value: 0x7f080055
+			public const int switch_thumb_material_light = 2131230805;
 			
 			// aapt resource value: 0x7f08003c
 			public const int switch_thumb_normal_material_dark = 2131230780;
@@ -1415,6 +1424,12 @@ namespace Phoneword.Droid
 			
 			// aapt resource value: 0x7f060008
 			public const int abc_text_size_title_material_toolbar = 2131099656;
+			
+			// aapt resource value: 0x7f060066
+			public const int activity_horizontal_margin = 2131099750;
+			
+			// aapt resource value: 0x7f060067
+			public const int activity_vertical_margin = 2131099751;
 			
 			// aapt resource value: 0x7f060001
 			public const int cardview_compat_inset_shadow = 2131099649;
@@ -1852,8 +1867,11 @@ namespace Phoneword.Droid
 			// aapt resource value: 0x7f020062
 			public const int mr_ic_settings_light = 2130837602;
 			
+			// aapt resource value: 0x7f020064
+			public const int notification_template_icon_bg = 2130837604;
+			
 			// aapt resource value: 0x7f020063
-			public const int notification_template_icon_bg = 2130837603;
+			public const int RoundedButton = 2130837603;
 			
 			static Drawable()
 			{
@@ -2456,6 +2474,9 @@ namespace Phoneword.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f05001e
+			public const int ApplicationName = 2131034142;
+			
 			// aapt resource value: 0x7f05000b
 			public const int abc_action_bar_home_description = 2131034123;
 			
@@ -2507,8 +2528,14 @@ namespace Phoneword.Droid
 			// aapt resource value: 0x7f05001b
 			public const int abc_toolbar_collapse_description = 2131034139;
 			
+			// aapt resource value: 0x7f050020
+			public const int action_settings = 2131034144;
+			
 			// aapt resource value: 0x7f05001d
 			public const int appbar_scrolling_view_behavior = 2131034141;
+			
+			// aapt resource value: 0x7f05001f
+			public const int hello_world = 2131034143;
 			
 			// aapt resource value: 0x7f050000
 			public const int mr_media_route_button_content_description = 2131034112;
@@ -2570,6 +2597,9 @@ namespace Phoneword.Droid
 			
 			// aapt resource value: 0x7f070084
 			public const int Animation_AppCompat_DropDownUp = 2131165316;
+			
+			// aapt resource value: 0x7f070144
+			public const int AppTheme = 2131165508;
 			
 			// aapt resource value: 0x7f070085
 			public const int Base_AlertDialog_AppCompat = 2131165317;

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <!-- Material.Light テーマから継承 -->
+  <style name="AppTheme" parent="android:Theme.Material.Light">
+    <!-- 以下を参考にテーマカラーを設定します -->
+    <!-- http://www.google.com/design/spec/style/color.html#color-color-palette -->
+    <!-- colorPrimaryはデフォルトのアクションバーの背景に使用されます -->
+    <item name="android:colorPrimary">@color/colorPrimary</item>
+    <!-- colorPrimaryDark は status bar の色です -->
+    <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+    <!-- colorAccent は widget の色合いに使われる colorControlActivated の標準色です -->
+    <item name="android:colorAccent">@color/colorAccent</item>
+    <!-- この他に colorControlNormal、colorControlActivated、
+         colorControlHighlight、colorSwitchThumbNormal などを設定できます -->
+  </style>
+  
+</resources>

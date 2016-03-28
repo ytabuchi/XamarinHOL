@@ -15,7 +15,10 @@ namespace Phoneword
         {
             //PhoneNumbers = new List<string>();
             PhoneNumbers = new List<Numbers>();
-            MainPage = new NavigationPage(new Phoneword.MainPage());
+            var nav = new NavigationPage(new Phoneword.MainPage());
+            nav.BarBackgroundColor = Color.FromHex("3498DB");
+            nav.BarTextColor = Color.White;
+            MainPage = nav;
         }
 
         protected override void OnStart()
