@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
+using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -29,21 +31,49 @@ namespace Phoneword
 
         async void OnCall(object sender, EventArgs e)
         {
-            if (await this.DisplayAlert(
+            await this.DisplayAlert(
                     "Dial a Number",
                     "Would you like to call " + translatedNumber + "?",
                     "Yes",
-                    "No"))
+                    "No");
+
+            var status = PermissionStatus.Unknown;
+            // Permissionを取得しているかを確認
+            status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
+
+            // 持っていなかったらPermissionをリクエスト
+            if (status != PermissionStatus.Granted)
+                status = (await CrossPermissions.Current.RequestPermissionsAsync(Permission.Phone))[Permission.Phone];
+
+            // Permissionを取得できたらIntentに投げる
+            if (status == PermissionStatus.Granted)
             {
                 var dialer = DependencyService.Get<IDialer>();
                 if (dialer != null)
                 {
-                    //App.PhoneNumbers.Add(translatedNumber);
+                    //dialer.Dial(translatedNumber);
                     App.PhoneNumbers.Add(new Numbers(phoneNumberText.Text, translatedNumber, DateTime.Now));
                     callHistoryButton.IsEnabled = true;
                     dialer.Dial(translatedNumber);
                 }
+
             }
+
+            //if (await this.DisplayAlert(
+            //        "Dial a Number",
+            //        "Would you like to call " + translatedNumber + "?",
+            //        "Yes",
+            //        "No"))
+            //{
+            //    var dialer = DependencyService.Get<IDialer>();
+            //    if (dialer != null)
+            //    {
+            //        //App.PhoneNumbers.Add(translatedNumber);
+            //        App.PhoneNumbers.Add(new Numbers(phoneNumberText.Text, translatedNumber, DateTime.Now));
+            //        callHistoryButton.IsEnabled = true;
+            //        dialer.Dial(translatedNumber);
+            //    }
+            //}
         }
 
         async void OnCallHistory(object sender, EventArgs e)

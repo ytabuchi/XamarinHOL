@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{FBDEF586-4785-45E6-8E7F-5CE8E863EC44}</ProjectGuid>
+    <ProjectGuid>{7C45A11C-DD9A-4F20-AE17-A1D545E60C31}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Phoneword_iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>

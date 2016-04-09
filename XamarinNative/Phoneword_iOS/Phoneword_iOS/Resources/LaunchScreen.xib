@@ -11,17 +11,17 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="3" translatesAutoresizingMaskIntoConstraints="NO" image="Icon-80.png">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="2" translatesAutoresizingMaskIntoConstraints="NO" image="Icon-80.png">
                     <rect key="frame" x="200" y="200" width="80" height="80"/>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.27843137254901962" green="0.75294117647058822" blue="0.87058823529411766" alpha="1"/>
+            <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.27450980392156865" green="0.75294117647058822" blue="0.8666666666666667" alpha="1"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
             <constraints>
-                <constraint id="4" firstItem="3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX"/>
-                <constraint id="5" firstItem="3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY"/>
+                <constraint id="3" firstItem="2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX"/>
+                <constraint id="4" firstItem="2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY"/>
             </constraints>
         </view>
     </objects>
