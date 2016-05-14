@@ -14,6 +14,8 @@ namespace Phoneword_Droid
     {
         static readonly List<string> phoneNumbers = new List<string>();
 
+        private const int DIALOG_ID_CALL = 1;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -49,23 +51,9 @@ namespace Phoneword_Droid
 
             callButton.Click += (object sender, EventArgs e) =>
             {
-                // "Call" ボタンがクリックされたら電話番号へのダイヤルを試みます。
-                var callDialog = new AlertDialog.Builder(this);
-                callDialog.SetMessage("Call " + translatedNumber + "?");
-                callDialog.SetNeutralButton("Call", delegate
-                {
-                    // 掛けた番号のリストに番号を追加します。
-                    phoneNumbers.Add(translatedNumber);
-                    // Call History ボタンを有効にします。
-                    callHistoryButton.Enabled = true;
-                    // 電話への intent を作成します。
-                    var callIntent = new Intent(Intent.ActionCall);
-                    callIntent.SetData(Android.Net.Uri.Parse("tel:" + translatedNumber));
-                    StartActivity(callIntent);
-                });
-                callDialog.SetNegativeButton("Cancel", delegate { });
-                // アラートダイアログを表示し、ユーザーのレスポンスを待ちます。
-                callDialog.Show();
+                Bundle args = new Bundle();
+                args.PutString("translatedNumber", translatedNumber);
+                ShowDialog(DIALOG_ID_CALL, args);
             };
 
             callHistoryButton.Click += (sender, e) =>
@@ -74,6 +62,40 @@ namespace Phoneword_Droid
                 intent.PutStringArrayListExtra("phone_numbers", phoneNumbers);
                 StartActivity(intent);
             };
+        }
+
+        protected override Dialog OnCreateDialog(int id, Bundle args)
+        {
+            switch (id)
+            {
+                case DIALOG_ID_CALL:
+                    {
+                        Button callHistoryButton = FindViewById<Button>(Resource.Id.CallHistoryButton);
+                        string translatedNumber = args.GetString("translatedNumber");
+
+                        // "Call" ボタンがクリックされたら電話番号へのダイヤルを試みます。
+                        var callDialog = new AlertDialog.Builder(this);
+                        callDialog.SetMessage("Call " + translatedNumber + "?");
+                        callDialog.SetNeutralButton("Call", delegate
+                        {
+                            // 掛けた番号のリストに番号を追加します。
+                            phoneNumbers.Add(translatedNumber);
+                            // Call History ボタンを有効にします。
+                            callHistoryButton.Enabled = true;
+                            // 電話への intent を作成します。
+                            var callIntent = new Intent(Intent.ActionCall);
+                            callIntent.SetData(Android.Net.Uri.Parse("tel:" + translatedNumber));
+                            StartActivity(callIntent);
+                        });
+                        callDialog.SetNegativeButton("Cancel", delegate { });
+                        // アラートダイアログを表示し、ユーザーのレスポンスを待ちます。
+                        return callDialog.Create();
+                    }
+                default:
+                    break;
+            }
+
+            return base.OnCreateDialog(id);
         }
     }
 }
