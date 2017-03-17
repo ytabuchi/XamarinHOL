@@ -1,6 +1,6 @@
 # Xamarin Hands On Lab
 
-Xamarin の最初に行うべきハンズオンです。
+Xamarin で最初に行うべきハンズオンです。
 公式のドキュメントである以下の３つを日本語訳して纏めたドキュメントです。
 
 - [Hello, Android - Xamarin](https://developer.xamarin.com/guides/android/getting_started/hello,android/)
