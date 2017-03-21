@@ -26,7 +26,6 @@ namespace Phoneword.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Phoneword.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Attribute

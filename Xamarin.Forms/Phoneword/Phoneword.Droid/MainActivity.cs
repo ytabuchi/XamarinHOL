@@ -23,9 +23,7 @@ namespace Phoneword.Droid
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
         {
-            Console.WriteLine("OnRequestPermissionsResult called ...");
-
-            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }
