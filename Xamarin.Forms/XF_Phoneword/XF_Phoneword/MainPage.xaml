@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="XF_Phoneword.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Phoneword">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    Android="10"
+                    WinPhone="10"
+                    iOS="10, 30, 10, 10" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout Spacing="15" VerticalOptions="FillAndExpand">
+            <Label Text="Enter a Phoneword:" />
+            <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
+            <Button x:Name="translateButton"
+                    Clicked="OnTranslate"
+                    Text="Translate" />
+            <Button x:Name="callButton"
+                    Clicked="OnCall"
+                    IsEnabled="false"
+                    Text="Call" />
+            <Button x:Name="callHistoryButton"
+                    Clicked="OnCallHistory"
+                    IsEnabled="False"
+                    Text="Call History" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
